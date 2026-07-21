@@ -1,0 +1,17 @@
+#include <stdio.h> 
+int main(){
+    int a[10]={15,12,14,16,18};
+    int pos,val;
+    printf("please enter your value:");
+    scanf("%d",&val);
+    printf("please enter the position:");
+    scanf("%d",&pos);
+    for(int i=4;i>=pos;i--){
+        a[i+1]=a[i];
+    }
+    a[pos]=val;
+    for(int i=0;i<6;i++){
+        printf("%d\n",a[i]);
+    }
+    
+}
