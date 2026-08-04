@@ -1,0 +1,39 @@
+#include <stdio.h>
+int main(){
+    int arr[100],a;
+    printf("======================================\n");
+    printf("            🤍SELECTION SORT🤍           \n");
+    printf("======================================\n");
+    
+    printf("Please Enter THE Size of THE Array➡");
+    scanf("%d",&a);
+    printf("NOW,Enter THE %d elements of THE Array",a);
+    
+    for(int i=0;i<a;i++){
+       printf("\n ELEMENT %d❗➡",i+1);
+       scanf("%d",&arr[i]);
+    }
+    printf("======================================\n");
+    printf("Array Before Sorting\n");
+    for(int i=0;i<a;i++){
+        printf("%d  ",arr[i]);
+    }
+    printf("\n");
+    printf("======================================\n");
+    int temp=0;
+    for(int i=0;i<a-1;i++){
+        for(int j=i+1;j<a;j++){
+               if(arr[i]>arr[j]){
+                   temp=arr[i];
+                   arr[i]=arr[j];
+                   arr[j]=temp;
+            }
+        }
+    }
+    printf("Array AFTER the complete Sorting of %d ELEMENTS➡",a);
+    for(int i=0;i<a;i++){
+        printf("%d ",arr[i]);
+    }printf("\n");
+    printf("=================== THE END ===================\n");
+    printf("THANK YOU FOR USING MY PROGRAMME😎");
+}
